@@ -1,7 +1,242 @@
-.hero{
-    background-image: url(../../img/bg-form.jpg);
-    background-size: cover;
-    width: 100vw;
-    height: 100vh;
-   transform: rotate(-180deg);;
+.hero {
+  background: url(../../img/hero-chip.png), url(../../img/bg-hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%, cover;
+  width: 100%;
+  height: auto;
+  position: relative;
+  overflow-x: hidden;
+  padding: 200px 0 120px 0;
+  @media screen and (max-width: 1199px) {
+    background-size: 100% 100%, cover;
+    background-position: right;
+  }
+  @media screen and (max-width: 991px) {
+    padding: 150px 0 120px 0;
+  }
+  &__ellipse-left-bottom {
+    position: absolute;
+    background: linear-gradient(142.41deg, #bd24e6 -12.51%, #e40fac 136.14%);
+    opacity: 0.3;
+    filter: blur(150px);
+    width: 425px;
+    height: 455px;
+    left: -276px;
+    bottom: 0;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  &__ellipse-right-top {
+    position: absolute;
+    background: linear-gradient(
+      138.34deg,
+      rgba(224, 37, 206, 0.7) -11.36%,
+      rgba(74, 237, 82, 0.7) 51.55%,
+      rgba(189, 36, 230, 0.7) 113.16%
+    );
+    opacity: 0.5;
+    filter: blur(150px);
+    width: 477px;
+    height: 566px;
+    right: -180px;
+    top: -104px;
+    z-index: 1;
+  }
+  &__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (max-width: 1199px) {
+      padding-right: 50px;
+    }
+    @media screen and (max-width: 991px) {
+      margin-bottom: 150px;
+      padding-right: 0;
+    }
+    h4 {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 1.2;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    h1 {
+      font-family: "Paytone One";
+      font-size: 68px;
+      line-height: 1.1;
+      letter-spacing: 0.05em;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: var(--secondary-color);
+      text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      margin-bottom: 28px;
+      @media screen and(max-width:389px) {
+        font-size: 57px;
+      }
+      span {
+        background: var(--secondary-bg-color);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        background-size: 200% 100%;
+        animation: animatedText 2s infinite alternate-reverse;
+        @keyframes animatedText {
+          from {
+            background-position: 0%;
+          }
+          to {
+            background-position: 100%;
+          }
+        }
+      }
+    }
+    p {
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.1em;
+      opacity: 0.7;
+      margin-bottom: 44px;
+    }
+  }
+  &__button {
+    gap: 24px;
+    &-primary {
+      @include button-main;
+      @media screen and(max-width:576px) {
+        margin-bottom: 20px;
+        width: 100%;
+      }
+    }
+    &-secondary {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: transparent;
+      border: none;
+      border-radius: 6px;
+      font-weight: 800;
+      font-size: 20px;
+      line-height: 1.2;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--primary-color);
+      cursor: pointer;
+      transition: 0.6s;
+
+      @media screen and(max-width:576px) {
+        width: 100%;
+      }
+      &:hover {
+        box-shadow: 0 0 14px var(--primary-color);
+        text-shadow: 0 0 8px var(--secondary-border-color);
+        transition: 0.6s;
+      }
+      svg {
+        margin-top: 2px;
+        z-index: 2;
+        width: 63px;
+        height: 63px;
+        margin-right: 8px;
+        border-radius: 50%;
+      }
+    }
+  }
+  &__card {
+    height: 491px;
+    width: 524px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @media screen and (max-width: 1199px) {
+      padding-right: 20px;
+    }
+    @media screen and (max-width: 991px) {
+      padding-right: 0;
+    }
+    @media screen and(max-width: 530px) {
+      width: 95vw;
+      height: 390px;
+    }
+    #card_bg {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      @media screen and(max-width: 530px) {
+        width: 95vw;
+      }
+    }
+    #hero_card_ellipse,
+    #hero_card_ellipse2 {
+      position: absolute;
+      height: 135%;
+      width: 135%;
+      @media screen and(max-width: 530px) {
+        width: 120vw;
+      }
+    }
+    &_monkey {
+      position: absolute;
+      bottom: 0;
+      @media screen and(max-width: 530px) {
+        width: 110vw;
+        bottom: 0;
+      }
+    }
+    &_timer {
+      @include timer;
+      position: absolute;
+      min-width: 170px;
+      right: 30px;
+      top: 30px;
+      padding: 8px 12px;
+    }
+    &_info {
+      position: absolute;
+      width: 98%;
+      margin-bottom: 4px;
+      height: 138px;
+      background: linear-gradient(
+        138.84deg,
+        rgba(255, 255, 255, 0.05) -6.39%,
+        rgba(255, 255, 255, 0.05) 112.17%
+      );
+
+      backdrop-filter: blur(5px);
+      border-radius: 0px 0px 8px 8px;
+      bottom: 0;
+      padding: 14px 18px;
+
+      @media screen and(max-width: 530px) {
+        width: 94vw;
+      }
+      &_title {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        margin-bottom: 2px;
+      }
+      &_creator {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        opacity: 0.7;
+        margin-bottom: 22px;
+      }
+      &_price {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 1.2;
+        img {
+          margin-right: 8px;
+        }
+      }
+      &_button{
+        
+        @include button-bid;
+      }
+    }
+  }
 }

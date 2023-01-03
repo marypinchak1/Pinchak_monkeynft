@@ -33,12 +33,24 @@
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
-    animation: animatedText 3s infinite alternate;
+    animation: animatedText 2s infinite alternate;
     text-transform: uppercase;
     z-index: 90;
     background-size: 150% 100%;
     cursor: pointer;
     transition: 0.8s;
+    @media screen and(max-width:440px) {
+      font-size: 16px;
+     
+    }
+    @keyframes animatedText {
+      from{
+          background-position: 0%;
+      }
+      to{
+          background-position: 100%;
+      }
+  }
     &:hover {
       text-shadow: 0 0 8px var(--primary-color);
       transition: 0.8s;
@@ -88,9 +100,19 @@
     white-space: nowrap;
     padding: 10px 12px;
     transition: 0.8s;
+    @media screen and(max-width:991px) {
+      margin-left: 20%;
+    }
+    @media screen and(max-width:540px) {
+      margin-left: 0;
+    }
+    @media screen and(max-width:440px) {
+      font-size: 14px;
+      padding: 6px 8px;
+    }
     &:hover {
-      box-shadow: 0 0 12px var(--secondary-border-color);
-      transition: 0.8s;
+      box-shadow: 0 0 20px var(--secondary-border-color);
+      transition: 0.6s;
     }
   }
   &__burger {
@@ -166,7 +188,7 @@
           margin-bottom: 18px;
           a {
             text-decoration: none;
-            color: #ffffff;
+            color: var(--primary-color);
             text-transform: uppercase;
             font-family: "Raleway";
             font-weight: 800;

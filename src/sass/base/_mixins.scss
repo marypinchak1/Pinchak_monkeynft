@@ -46,3 +46,12 @@
     transition: 0.8s;
   }
 }
+@mixin section-title{
+  font-weight: 700;
+font-size: 38px;
+line-height: 1.25;
+text-align: center;
+letter-spacing: 0.05em;
+color: var(--primary-color);
+
+}

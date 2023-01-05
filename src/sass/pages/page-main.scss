@@ -1,5 +1,106 @@
-body{
-    font-family: 'Outfit';
-    color: var(--primary-color);
-   
+body {
+  font-family: "Outfit";
+  color: var(--primary-color);
+}
+.auctions {
+  background-image: url(../../img/bg-sec-auct.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  padding: 150px 0;
+  margin: 0 auto;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25))
+    drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
+  &__title {
+    @include section-title;
+    margin-bottom: 80px;
+  }
+  &__card {
+    background-image: url(../../img/bg_card-auc.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 442px;
+    padding: 2px;
+    > img {
+      transform: translateY(-30%);
+      width: 105%;
+      height: 94%;
+    }
+    &_info {
+      transform: translateY(-105%);
+      height: auto;
+      background: linear-gradient(
+        138.84deg,
+        rgba(255, 255, 255, 0.05) -6.39%,
+        rgba(255, 255, 255, 0.05) 112.17%
+      );
+
+      backdrop-filter: blur(5px);
+      border-radius: 0px 0px 8px 8px;
+      bottom: 0;
+      padding: 14px 18px;
+
+      &_title {
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2;
+        margin-bottom: 4px;
+        @media screen and(max-width: 430px) {
+          font-size: 14px;
+        }
+      }
+      &_creator {
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 1.2;
+        opacity: 0.7;
+        margin-bottom: 18px;
+        @media screen and(max-width: 430px) {
+          margin-bottom: 10px;
+        }
+        @media screen and(max-width: 374px) {
+          font-size: 14px;
+        }
+      }
+      &_price {
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        font-size: 18px;
+        line-height: 1.2;
+        @media screen and(max-width: 550px) {
+          font-size: 16px;
+          line-height: 1;
+        }
+        img {
+          margin-right: 8px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+      &_timer {
+        @include timer2;
+        margin-bottom: 10px;
+        padding: 12px 0;
+        width: 100%;
+        @media screen and(max-width: 430px) {
+          right: 24px;
+          top: 24px;
+        }
+      }
+      &_button {
+        @include button-bid;
+        padding: 10px 18px;
+        font-size: 18px;
+        @media screen and(max-width: 374px) {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+  &__button{
+    @include button-main;
+  }
 }

@@ -41,10 +41,22 @@ var x = setInterval(function () {
   // Output the result in an element with id="demo"
   document.getElementById("timer").innerHTML =
     days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+  document.getElementById("timer2").innerHTML =
+    days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
+    document.getElementById("timer3").innerHTML =
+    days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
+    document.getElementById("timer4").innerHTML =
+    days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
+    document.getElementById("timer5").innerHTML =
+    days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
 
   // If the count down is over, write some text
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("timer").innerHTML = "EXPIRED";
+    document.getElementById("timer").innerHTML = "0h 0m 0s";
+    document.getElementById("timer2").innerHTML = "0h:0m:0s";
+    document.getElementById("timer3").innerHTML = "0h:0m:0s";
+    document.getElementById("timer4").innerHTML = "0h:0m:0s";
+    document.getElementById("timer5").innerHTML = "0h:0m:0s";
   }
 }, 1000);

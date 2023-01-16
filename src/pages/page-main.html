@@ -1,13 +1,16 @@
 <main>
   @@include("../components/_hero.html")
-  <section class="auctions">
+  <section class="auctions" style="background-image: url(img/bg-sec-auct.png)">
     <div class="container">
       <div class="row">
         <div class="col-12">
           <div class="auctions__title">TRENDING AUCTIONS</div>
           <div class="col-12 d-flex flex-wrap">
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
-              <div class="auctions__card">
+              <div
+                class="auctions__card"
+                style="background-image: url(img/bg_card-auc.png)"
+              >
                 <img src="img/monkey43.png" alt="monkey43" />
                 <div class="auctions__card_info d-flex">
                   <div class="col-6">
@@ -31,12 +34,15 @@
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
-              <div class="auctions__card">
+              <div
+                class="auctions__card"
+                style="background-image: url(img/bg_card-auc.png)"
+              >
                 <img src="img/monkey55.png" alt="monkey55" />
                 <div class="auctions__card_info d-flex">
                   <div class="col-6">
                     <p class="auctions__card_info_title">Monkey #55</p>
-                    <p class="auctions__card_info_creator">By Laura Petrova</p>
+                    <p class="auctions__card_info_creator">By Lara Pelan</p>
                     <div class="auctions__card_info_price">
                       <img src="img/hero-price.png" alt="price" />17.8 ETH
                     </div>
@@ -55,7 +61,10 @@
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
-              <div class="auctions__card">
+              <div
+                class="auctions__card"
+                style="background-image: url(img/bg_card-auc.png)"
+              >
                 <img src="img/monkey25.png" alt="monkey25" />
                 <div class="auctions__card_info d-flex">
                   <div class="col-6">
@@ -79,9 +88,12 @@
               </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col-xl-3 p-3">
-              <div class="auctions__card">
-                <img src="img/monkey01.png" alt="monkey01" />
-                <div class="auctions__card_info d-flex">
+              <div
+                class="auctions__card"
+                style="background-image: url(img/bg_card-auc.png)"
+              >
+                <img src="img/monkey01.png" alt="monkey01" style="width: 130%;  transform: translate(-20px, -30%);"/>
+                <div class="auctions__card_info d-flex" >
                   <div class="col-6">
                     <p class="auctions__card_info_title">Monkey #01</p>
                     <p class="auctions__card_info_creator">By Stefan Brown</p>
@@ -104,14 +116,14 @@
             </div>
           </div>
           <div class="col-12 d-flex justify-content-center">
-            <button class="auctions__button" >VIEW MORE</button>
+            <button class="auctions__button">VIEW MORE</button>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="creator">
+  <section class="creator" style="background-image: url(img/bg-hero.jpg)">
     <hr class="hr-creator-top" />
     <div class="creator__bg"></div>
     <div class="container">
@@ -119,7 +131,7 @@
         <div class="col-12">
           <div class="creator__title">HOW TO BECOME MONKEY NFT CREATOR</div>
 
-          <div class="col-12 d-md-flex flex-wrap">
+          <div class="col-12 d-md-flex flex-wrap pb-5">
             <div
               class="creator__card creator__card_wallet col-md-6 col-lg-4 px-3"
             >
@@ -487,7 +499,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div><hr class="hr-creator-bottom" />
   </section>
-  <hr class="hr-creator-bottom" />
+  
 </main>

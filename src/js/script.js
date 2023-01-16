@@ -4,16 +4,16 @@ $(".header__burger").on("click", function () {
   gsap.fromTo(
     ".header__burger_menu",
     {
-      scale: 1.2,
+      scale:0.1,
     },
     {
-      duration: 1,
+     
       scale: 1,
     }
   );
   gsap.from(".header__burger_menu li", {
-    duration: 1,
-    x: -1000,
+    duration:1,
+    z: -1000,
   });
 });
 $(".header__burger_menu a").on("click", function () {
@@ -22,7 +22,7 @@ $(".header__burger_menu a").on("click", function () {
 });
 
 // Set the date we're counting down to
-var countDownDate = new Date("Jan 15, 2023 15:37:25").getTime();
+var countDownDate = new Date("Jan 25, 2023 15:37:25").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {

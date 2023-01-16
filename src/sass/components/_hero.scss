@@ -1,14 +1,11 @@
 .hero {
-  background: url(../../img/hero-chip.png), url(../../img/bg-hero.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 100%, cover;
   width: 100%;
   height: auto;
   position: relative;
   overflow-x: hidden;
   padding: 200px 0 0 0;
   @media screen and (max-width: 1199px) {
-    background-size: cover, cover;
     background-position: right;
   }
   @media screen and (max-width: 991px) {
@@ -45,12 +42,14 @@
   &__text {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+  margin-top: 20px;
 
     @media screen and (max-width: 1199px) {
       padding-right: 50px;
+      margin-top: -30px;
     }
     @media screen and (max-width: 991px) {
+      margin-top: 0;
       margin-bottom: 150px;
       padding-right: 0;
     }

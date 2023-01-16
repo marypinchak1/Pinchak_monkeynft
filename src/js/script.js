@@ -4,15 +4,14 @@ $(".header__burger").on("click", function () {
   gsap.fromTo(
     ".header__burger_menu",
     {
-      scale:0.1,
+      scale: 0.1,
     },
     {
-     
       scale: 1,
     }
   );
   gsap.from(".header__burger_menu li", {
-    duration:1,
+    duration: 1,
     z: -1000,
   });
 });
@@ -43,11 +42,11 @@ var x = setInterval(function () {
     days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
   document.getElementById("timer2").innerHTML =
     days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
-    document.getElementById("timer3").innerHTML =
+  document.getElementById("timer3").innerHTML =
     days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
-    document.getElementById("timer4").innerHTML =
+  document.getElementById("timer4").innerHTML =
     days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
-    document.getElementById("timer5").innerHTML =
+  document.getElementById("timer5").innerHTML =
     days + "d : " + hours + "h : " + minutes + "m : " + seconds + "s";
 
   // If the count down is over, write some text

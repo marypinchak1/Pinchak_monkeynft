@@ -112,3 +112,46 @@ new Swiper(".companies__slider-reversed", {
     },
   },
 });
+new Swiper(".creators__slider", {
+  slidesPerView: 1,
+  centeredSlides: true,
+  grabCursor: true,
+  loop: true,
+  speed: 2000,
+  effect: "coverflow",
+  coverflowEffect: {
+    rotate: 20,
+    stretch: 100,
+  },
+  autoplay: {
+    delay: 6000,
+    stopOnLastSlide: false,
+    disableOnInteraction: false,
+  },
+
+  // Responsive breakpoints
+  breakpoints: {
+    330: {
+      slidesPerView: 1,
+      coverflowEffect: {
+        stretch: 200,
+      },
+    },
+    500: {
+      coverflowEffect: {
+        stretch: 300,
+      },
+    },
+    570: {
+      coverflowEffect: {
+        stretch: 450,
+      },
+    },
+    760: {
+      slidesPerView: 3,
+    },
+    1300: {
+      slidesPerView: 5,
+    },
+  },
+});
